@@ -8,106 +8,93 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'helvetica': ['Helvetica Neue', 'sans-serif'],
-                    },
-                    colors: {
-                        'red': '#FF0000',
-                        'blue': '#0000FF',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main class="h-screen w-full flex font-helvetica">
+    <main>
 
-        <!-- first side -->
-        <div class="hidden lg:flex w-1/2 bg-cover bg-center" style="background-image: url('/assets/space.png');">
-            <div class="w-full h-full flex flex-col justify-between items-center text-center px-12 py-16">
+        <div class="left-side">
+            <div class="left-content">
 
-                <div class="max-w-xl pt-8">
-                    <h1 class="text-[72px] leading-none text-white font-extralight mb-8">
-                        The Future<br />
+                <div class="hero">
+                    <h1>
+                        The Future<br>
                         Through Space
                     </h1>
 
-                    <p class="text-gray-400 text-base leading-relaxed max-w-md mx-auto">
+                    <p>
                         Lorem ipsum dolor sit amet consectetur. Lorem posuere at odio
                         nullam pulvinar enim consequat at vitae. Elit ullamcorper
                         ultrices magna malesuada erat.
                     </p>
                 </div>
 
-                <div class="flex gap-2 pb-6">
-                    <div class="h-[2px] w-16 bg-white/30"></div>
-                    <div class="h-[2px] w-16 bg-white"></div>
-                    <div class="h-[2px] w-16 bg-white/30"></div>
-                    <div class="h-[2px] w-16 bg-white/30"></div>
+                <div class="slider">
+                    <div></div>
+                    <div class="active"></div>
+                    <div></div>
+                    <div></div>
                 </div>
 
             </div>
         </div>
 
-        <!-- second side -->
-        <div class="w-full lg:w-1/2 flex items-center justify-center bg-white p-8">
-            <div class="w-full max-w-md">
-                <div class="text-center mb-10">
-                    <h2 class="text-4xl mb-3 text-gray-900 tracking-tight">Welcome Back</h2>
-                    <p class="text-gray-500 text-sm">Enter your email and password to access your account</p>
+        <div class="right-side">
+            <div class="form-container">
+
+                <div class="header">
+                    <h2>Welcome Back</h2>
+                    <p>Enter your email and password to access your account</p>
                 </div>
 
-                <form class="space-y-6">
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-900 mb-2">Email</label>
-                        <input type="email" placeholder="Enter your email"
-                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all placeholder-gray-400 text-sm"
-                            required>
+                <form>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="Enter your email">
                     </div>
 
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-900 mb-2">Password</label>
-                        <div class="relative">
-                            <input type="password" placeholder="Enter your password"
-                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all placeholder-gray-400 text-sm"
-                                required>
-                            <button type="button"
-                                class="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-gray-600">
-                                <span>
-                                    <i class="fi fi-rr-eye"></i>
-                                </span>
+                    <div class="form-group">
+                        <label>Password</label>
+
+                        <div class="password-wrapper">
+                            <input type="password" placeholder="Enter your password">
+
+                            <button type="button" class="password-toggle">
+                                <i class="fi fi-rr-eye"></i>
                             </button>
                         </div>
                     </div>
 
-                    <div class="flex items-center justify-between text-sm mt-4">
-                        <label class="flex items-center text-gray-600 cursor-pointer">
-                            <input type="checkbox"
-                                class="mr-2 rounded border-gray-300 text-black focus:ring-black w-4 h-4">
+                    <div class="options">
+
+                        <label class="remember">
+                            <input type="checkbox">
                             Remember me
                         </label>
-                        <div class="text-gray-500">
-                            Forgot password? <a href="#" class="font-bold text-black hover:underline">Change now</a>
+
+                        <div class="forgot">
+                            Forgot password?
+                            <a href="#">Change now</a>
                         </div>
+
                     </div>
 
-                    <button type="submit"
-                        class="w-full bg-black text-white font-medium py-3.5 rounded-lg hover:bg-gray-800 transition-colors mt-8 text-sm">
+                    <button class="signin-btn" type="submit">
                         Sign In
                     </button>
+
                 </form>
 
-                <p class="mt-8 text-center text-sm text-gray-500">
-                    Don't have an account? <a href="#" class="font-bold text-black hover:underline">Sign Up</a>
+                <p class="signup">
+                    Don't have an account?
+                    <a href="#">Sign Up</a>
                 </p>
+
             </div>
         </div>
+
     </main>
 </body>
 
