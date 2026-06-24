@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EFM - Travail pratique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'helvetica': ['Helvetica Neue', 'sans-serif'],
+                    },
+                    colors: {
+                        'red': '#FF0000',
+                        'blue': '#0000FF',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+
 <body>
-    
+    <main class="h-screen w-full flex font-sans">
+
+        <div class="hidden lg:flex w-1/2 relative bg-cover bg-center"
+            style="background-image: url('/assets/space.png');">
+
+            <div class="relative p-12 flex flex-col justify-between h-full">
+                <div class="max-w-lg mt-8">
+                    <h1 class="text-[70px] text-white font-light mb-6">
+                        The Future<br>Through Space
+                    </h1>
+                    <p class="text-gray-300 text-sm leading-relaxed pr-10">
+                        Lorem ipsum dolor sit amet consectetur. Lorem posuere at odio nullam pulvinar enim consequat at
+                        vitae. Elit ullamcorper ultrices magna malesuada erat.
+                    </p>
+                </div>
+
+                <div class="flex gap-3 pb-6">
+                    <div class="h-[2px] w-12 bg-white/40 cursor-pointer"></div>
+                    <div class="h-[2px] w-12 bg-white cursor-pointer"></div>
+                    <div class="h-[2px] w-12 bg-white/40 cursor-pointer"></div>
+                </div>
+            </div>
+        </div>
+
+        <section class="">
+
+        </section>
+    </main>
 </body>
+
 </html>
